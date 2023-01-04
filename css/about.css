@@ -1,0 +1,80 @@
+:root {
+  --card-height: 370px;
+}
+
+.welcome {
+  height: 50vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col {
+  flex-basis: 25%;
+  padding: 0 var(--spacing-small);
+  margin-bottom: var(--spacing-small);
+}
+
+.people-container {
+  position: relative;
+}
+
+.person {
+  margin-top: calc(2 * var(--spacing-xl));
+  position: relative;
+  border: 1px solid var(--text-light);
+  border-radius: 0.375rem;
+
+  text-align: center;
+  padding: var(--spacing-small);
+
+  height: var(--card-height);
+  max-height: var(--card-height);
+}
+
+.person img {
+  width: 150px;
+  height: 150px;
+
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: white;
+}
+
+.person p {
+  overflow: hidden;
+  text-overflow: clip;
+}
+
+.person h2 {
+  margin-top: 75px;
+  text-align: center;
+}
+
+@media (max-width: 992px) {
+  .col {
+    flex-basis: calc(100% / 3);
+  }
+}
+
+@media (max-width: 768px) {
+  .col {
+    flex-basis: 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  .col {
+    flex-basis: 100%;
+  }
+}
